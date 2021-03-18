@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     public static bool timeToStop = false;
-    public static float timeValue = 20.00f;
+    [SerializeField] public static float timeValue = 20f;
     Text timeUI;
 
     // Start is called before the first frame update

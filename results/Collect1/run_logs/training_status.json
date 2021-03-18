@@ -1,0 +1,48 @@
+{
+    "CollectCoins": {
+        "checkpoints": [
+            {
+                "steps": 5344,
+                "file_path": "results\\Collect1\\CollectCoins\\CollectCoins-5344.onnx",
+                "reward": -2.5,
+                "creation_time": 1615313312.5410361
+            },
+            {
+                "steps": 333119,
+                "file_path": "results\\Collect1\\CollectCoins\\CollectCoins-333119.onnx",
+                "reward": 10.0,
+                "creation_time": 1615315504.0914304
+            },
+            {
+                "steps": 363105,
+                "file_path": "results\\Collect1\\CollectCoins\\CollectCoins-363105.onnx",
+                "reward": 106.2,
+                "creation_time": 1615316061.9136686
+            },
+            {
+                "steps": 499940,
+                "file_path": "results\\Collect1\\CollectCoins\\CollectCoins-499940.onnx",
+                "reward": 115.5,
+                "creation_time": 1615317524.215841
+            },
+            {
+                "steps": 500004,
+                "file_path": "results\\Collect1\\CollectCoins\\CollectCoins-500004.onnx",
+                "reward": 115.5,
+                "creation_time": 1615317524.275841
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500004,
+            "file_path": "results\\Collect1\\CollectCoins.onnx",
+            "reward": 115.5,
+            "creation_time": 1615317524.275841
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

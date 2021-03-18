@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public static bool isPlayer;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("PlayerGame");
+        isPlayer = true;
+    }
+    public void AgentPlay()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("AgentGame");
+        isPlayer = false;
     }
     public void GoToHighScoreMenu()
     {

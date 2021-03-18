@@ -64,12 +64,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DeathEffectScript.cs" />
     <Compile Include="Assets\EndGameScore.cs" />
     <Compile Include="Assets\EndUI.cs" />
     <Compile Include="Assets\MainMenuScript.cs" />
-    <Compile Include="Assets\PlayerScript.cs" />
-    <Compile Include="Assets\PreventFall.cs" />
     <Compile Include="Assets\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\Agent_01\AgentGoal.cs" />
+    <Compile Include="Assets\Scripts\Agent_01\AgentMoveToGoal.cs" />
+    <Compile Include="Assets\Scripts\Agent_01\OffMap.cs" />
+    <Compile Include="Assets\Scripts\Agent_02\AgentCollectCoins.cs" />
+    <Compile Include="Assets\Scripts\Agent_02\FallingOff.cs" />
+    <Compile Include="Assets\Scripts\Highscore\HighScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Highscore\HighscoreLoader.cs" />
+    <Compile Include="Assets\Scripts\MovementSpeed\MovementSettings.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\SpawnScript.cs" />
     <Compile Include="Assets\TimerScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -275,6 +283,24 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>E:/Programs/Unity/2019.4.19f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.barracuda@1.2.1-preview/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.ml-agents@1.7.2-preview/Plugins/System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.ml-agents@1.7.2-preview/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.ml-agents@1.7.2-preview/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/PackageCache/com.unity.ml-agents@1.7.2-preview/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>E:/Programs/Unity/2019.4.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -624,8 +650,20 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Barracuda.MacBLAS">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda.Editor">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -636,17 +674,44 @@
     <Reference Include="Unity.Timeline">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Barracuda">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda.iOSBLAS">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ML-Agents.CommunicatorObjects">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Barracuda.BurstBLAS">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ML-Agents.Editor">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.ML-Agents.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ML-Agents">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.ML-Agents.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda.ONNX">
+      <HintPath>E:/PROJECTS/Unity/Project1/Library/ScriptAssemblies/Unity.Barracuda.ONNX.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
